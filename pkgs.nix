@@ -26,6 +26,7 @@ environment.systemPackages = with pkgs; [
   tailscale
   nh #yet another nix client helper
   pavucontrol
+  wl-clipboard
   ];
 
 services.flatpak.enable = true;
