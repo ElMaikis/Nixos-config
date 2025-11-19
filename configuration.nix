@@ -80,7 +80,9 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = false;
+  
   hardware.bluetooth.enable = true;
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -105,7 +107,7 @@
     shell = pkgs.fish;
     isNormalUser = true;
     description = "maikis";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode" ];
     packages = with pkgs; [
     #  thunderbird
     ];
