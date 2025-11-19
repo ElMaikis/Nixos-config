@@ -52,11 +52,8 @@
    services.xserver.enable = true;
 
   # Enable the Gnome Desktop Environment.
-  services.displayManager.gdm = {
-	enable = true;
-	wayland = true;
-  };
-  services.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
   environment.gnome.excludePackages = with pkgs; [
 
 	gnome-weather
