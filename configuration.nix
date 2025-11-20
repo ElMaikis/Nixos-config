@@ -48,12 +48,15 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-   services.xserver.enable = true;
+  services.xserver = {
+	enable = true;
+	displayManager.gdm = {
+	  enable = true;
+	  wayland = true;
+	};
+	desktopManager.gnome.enable = true;
+  };
 
-  # Enable the Gnome Desktop Environment.
-  services.xserver.displayManager.gdm.wayland.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
   environment.gnome.excludePackages = with pkgs; [
 
 	gnome-weather
