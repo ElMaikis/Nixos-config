@@ -51,6 +51,7 @@ pkgs = "sudo nvim /etc/nixos/pkgs.nix";
 homer = "home-manager switch --flake /etc/nixos#maikis --impure";
 nixosr = "sudo nixos-rebuild switch --flake /etc/nixos#flakes";
 flakeup = "nix flake update";
+home = "sudo nvim /etc/nixos/home.nix";
 
 };
 
